@@ -1,0 +1,57 @@
+For Frontend:
+
+You have to create a Movie rating Web application.
+Main requirements of the App are:
+
+1) Homepage showing list of movies ( Grab the movies from the movies.js folder )
+2) On clicking any movie card, a new page with detailed description of that movie should appear
+	Description like 
+	i. title 
+	ii. Date of release
+	iii. Name of actors and directors, for that use the id provided to get the data from user.js
+	iv. Average rating. (Use font-awesome stars and half-starts to display rating)
+	v. Description
+3) User has the option to rate a movie, use material-ui React component (If you want prebuild components)
+		https://material-ui.com/
+4) After Submitting the rating, Just print a JS object in the form 
+	{
+		"movie_id": 5    // ID should be of the movie selected
+		"ratings": 3.5   // Ratings that user selected
+	}
+	that would otherwise be	sent to backend server
+5) Third page is a form which creates a new movie
+	Note: Just Print the JS object after submitting the form. ( The Format should be as specified in movies.js )  
+	{
+        "movie_id": 1,
+		"title": "Harry Potter 7",
+		"release_date": "2011/01/12",
+		"director_id": 5,
+		"actors": [
+			1,
+			3,
+			4,
+			6
+		],
+		"avg_rating": "3.5",
+		"description": "Some big string"
+	}
+
+	The directors and actors should be from the user.js file.
+	Create a dropdown to select the director
+	Multiple actors/actresses can be selected for a particular movie.
+
+
+6) When working with react, import the data from this js file using
+
+	-> import movieList(any name you wish) from '<path-to-the-data-file>'
+
+	For convenience, create a 'data' folder inside 'src' (when using create-react-app, which you will most probably use)
+	and put all js files in it.
+
+7) React/JS concept that you should be familiar with to complete the task
+	a) React Workflow (state, setState, JSX, props)
+	b) React Router
+
+I have written a simple script.js which explains the working of JS object ( Open index.html in browser and look at console )
+
+** Feel free to add more data, more fields into the objects **

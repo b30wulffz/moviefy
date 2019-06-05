@@ -1,33 +1,138 @@
-.App {
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul{
+  list-style: none;
+}
+
+/* Header */
+#navbar {
+  display: flex;
+  width: 100vw;
+  height: 15vh;
+  justify-content: space-around;
+  align-items: center;
+  background: rgb(229, 46, 120);
+}
+
+#nav-banner{
+  font-family: 'East Sea Dokdo', cursive;
+  color: white;
+  font-size: 40px;
+  border: 10px solid white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#nav-button{
+  width: 30vw;
+}
+
+#nav-button ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+#nav-button ul .nav-link{
+  display: inline-block;
+  background: white;
+  color: rgb(229, 46, 120);
+  width:120px;
+  margin:5px;
+  height: 40px;
   text-align: center;
+  align-self: center;
+  padding-top: 14px;
+  border-radius: 4px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+/* Footer */
+#footer {
+  /* width: 100vw; */
+  height: 19.3vh;
+  background: black;
+  color: rgb(229, 46, 120);
+  border-top: thick dashed rgb(229, 46, 120);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#credits{
+  padding-left: 10px;
+  width: 20vw;
+}
+
+#contact{
+  width: 20vw;
+  padding-right: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+#contact-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: flex-start; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Body */
+
+#body-main{
+  height: 65vh;
+}
+
+/* Home */
+
+#home{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+}
+
+#home-head{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#home-display{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80vw;
+  overflow-x: auto;
+}
+
+.card{
+  height: 300px;
+  min-width: 200px;
+  border: thin solid black;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.card-title{
+  text-align: center;
+  font-weight: 700;
+  border-bottom: thin solid black;
+  padding: 5px;
+}
+
+.card-image{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: red;
 }
