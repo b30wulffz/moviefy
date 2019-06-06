@@ -8,16 +8,12 @@ export default {
 					"ratings": 4
 				},
 				{
-					"movie_id": 2,
+					"movie_id": 1,
 					"ratings": 5
 				},
 				{
 					"movie_id": 3,
 					"ratings": 1
-				},
-				{
-					"movie_id": 5,
-					"ratings": 3
 				}
 			]
 		},
@@ -25,12 +21,12 @@ export default {
 			"user_id": 2,
 			"ratings": [
 				{
-					"movie_id": 4,
+					"movie_id": 1,
 					"ratings": 4
 				},
 				{
 					"movie_id": 2,
-					"ratings": 5
+					"ratings": 5 //movie id 3 is not there //still its showing 0 stars for user 2
 				}
 			]
 		},

@@ -111,14 +111,21 @@ ul{
   align-items: center;
   width: 80vw;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .card{
   height: 300px;
-  min-width: 200px;
+  min-width: 240px;
   border: thin solid black;
   margin: 10px;
   border-radius: 10px;
+}
+
+.card:hover{
+  transition: 0.5s ease-out;
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px 1px rgb(229, 46, 120);
 }
 
 .card-title{
@@ -126,13 +133,136 @@ ul{
   font-weight: 700;
   border-bottom: thin solid black;
   padding: 5px;
+  height: 25px;
 }
 
-.card-image{
+.card-image img{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  background: red;
+  margin: auto;
+  height: 220px;
+}
+
+.card-image{
+  
+  background:	rgb(255, 216, 236);
+}
+
+.card-rating{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+/* Render Movie */
+
+#renderMovie{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+}
+
+#error{
+  font-size: 200%;
+  color: rgb(229, 46, 120); 
+}
+
+#errorNum{
+  font-weight: 600;
+}
+
+/* Movie Card */
+#movie-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#movie-card-title{
+  width:auto;
+  text-align: center;
+}
+
+#movie-card-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+#movie-card-image img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14vw;
+  height:auto;
+  border: thin solid rgb(229, 46, 120);
+}
+
+
+#movie-card-content{
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: auto;
+  max-width: 60vw;
+  height:auto;
+  border-radius: 5px;
+  margin-left: 10px;
+  background:	rgb(255, 216, 236);
+  padding: 10px 20px;
+  max-height: 45vh;
+  overflow-y: auto;
+}
+
+/* Person-card */
+.person-card{
+  cursor: pointer;
+  border: thin solid;
+  border-radius: 5px;
+  min-width:90px; 
+  width: 90px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.person-img{
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  opacity: 80%;
+}
+
+.person-name, .person-age{
+  z-index: 1;
+  text-align: center;
+  background:	rgba(255, 216, 236,0.5);
+  display: inline;
+  width: inherit;
+  opacity: 0;
+}
+
+.person-card:hover .person-name, .person-card:hover .person-age{
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+
+#actors{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  height: 130px;
+  max-width: 40vw;
 }
