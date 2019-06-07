@@ -266,3 +266,13 @@ ul{
   height: 130px;
   max-width: 40vw;
 }
+
+/* Form */
+
+#form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+}
