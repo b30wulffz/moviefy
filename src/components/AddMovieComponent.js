@@ -5,16 +5,27 @@ class AddMovie extends Component{
     constructor(){
         super();
         this.state={
-            movie_id: MovieData.movies.length+1,
-            title: "",
-			poster: "",
-			release_date: "",
-			director_id: null,
-			actors: [],
-			avg_rating: "",
-			description: ""
+            data: {
+                movie_id: MovieData.movies.length+1,
+                title: "",
+                release_date: "",
+                director_id: null,
+                actors: [],
+                avg_rating: "",
+                description: ""
+            },
+
+            actorCheck: {
+                check_1: false,
+                check_2: false,
+                check_3: false,
+                check_4: false,
+                check_5: false,
+            }
+
         }
         this.handleInputChange=this.handleInputChange.bind(this);
+        this.handleSubmit=this.handleSubmit.bind(this);
     }
 
     handleInputChange(event){
@@ -23,37 +34,65 @@ class AddMovie extends Component{
 
         if(target.type === "checkbox"){
             const checked= target.checked;
-            if(checked){
+            /*if(checked){
                 const actorId=target.value;
-                const actorArray= this.state.actors.push(parseInt(actorId,10));
-                this.setState={
-                    actors: actorArray
-                }
+                //const actorArray= this.state.data.actors.push(parseInt(actorId,10));
+                this.setState((prevState)=>{
+                    return ({
+                            data:{
+                                ...prevState.data,
+                                actors: prevState.actors.concat([actorId])
+                            }
+                        })
+                })
             }
             else{
                 const actorId=target.value;
-                const index= this.state.actors.indexOf(parseInt(actorId,10));
+                const index= this.state.data.actors.indexOf(parseInt(actorId,10));
                 if(index>-1)
                 {
                     const actorArray= this.state.actors.splice(index,1);
-                    this.setState={
-                        actors: actorArray
-                    }
+                    this.setState((prevState)=>{
+                        return ({
+                                data:{
+                                    ...prevState.data,
+                                    actors: actorArray
+                                }
+                            })
+                    })
                 }
-            }
+            }*/
+            this.setState((prevState)=>{
+                return ({
+                        actorCheck:{
+                            ...prevState.actorCheck,
+                            [name]: checked
+                        }
+                    })
+            })
 
         }
         else{
             if(name === "director_id")
             {
-                this.setState({
-                    [name]: parseInt(target.value,10)   
+                this.setState((prevState)=>{
+                    return ({
+                            data:{
+                                ...prevState.data,
+                                [name]: parseInt(target.value,10)   
+                            }
+                        })
                 })
             }
             else
             {
-                this.setState({
-                    [name]: target.value
+                this.setState((prevState)=>{
+                    return ({
+                            data:{
+                                ...prevState.data,
+                                [name]: target.value 
+                            }
+                        })
                 })
             }
         }
@@ -62,11 +101,16 @@ class AddMovie extends Component{
         console.log(JSON.stringify(this.state))
     }
 
+    handleSubmit(event){
+        alert(JSON.stringify(this.state.data));
+        event.preventDefault(); 
+    }
+
     render(){
         return (
             <div id="form">
-                <h1>Add a new movie: </h1>
-                <form id="form-body">
+                <h1>Add a new movie </h1>
+                <form id="form-body" onSubmit={this.handleSubmit}>
                     <table>
                         <tr>
                             <th>
@@ -79,7 +123,7 @@ class AddMovie extends Component{
                                     name="title"
                                     id="title"
                                     onChange={this.handleInputChange}
-                                    value={this.state.title}
+                                    value={this.state.data.title}
                                 />
                             </td>
                         </tr>
@@ -93,7 +137,7 @@ class AddMovie extends Component{
                                     placeholder="yyyy/mm/dd"
                                     name="release_date"
                                     id="release_date"
-                                    value={this.state.release_date}
+                                    value={this.state.data.release_date}
                                     onChange={this.handleInputChange}
                                 />
                             </td>
@@ -103,7 +147,7 @@ class AddMovie extends Component{
                                 Director: 
                             </th>
                             <td>
-                                <select id="director_id" name="director_id" onChange={this.handleInputChange} value={this.state.director_id}>
+                                <select id="director_id" name="director_id" onChange={this.handleInputChange} value={this.state.data.director_id}>
                                     <option disabled selected>--SELECT A DIRECTOR--</option>
                                     <option value="1">Daniel Radcliffe</option>
                                     <option value="2">Jodie Foster</option>
@@ -120,32 +164,32 @@ class AddMovie extends Component{
                             <td>
                                 <ul>
                                     <li>
-                                        <input type="checkbox" id="actor_1" value="1" 
-                                            checked={this.state.actors.find((id)=> id===1)} 
+                                        <input type="checkbox" id="actor_1" name="check_1" value="1" 
+                                            checked={this.state.actorCheck.check_1} 
                                             onChange={this.handleInputChange} />
                                         <label htmlFor="actor_1">Daniel Radcliffe</label>
                                     </li>
                                     <li>
-                                        <input type="checkbox" id="actor_2" value="2" 
-                                            checked={this.state.actors.find((id)=> id===2)} 
+                                        <input type="checkbox" id="actor_2" name="check_2" value="2" 
+                                            checked={this.state.actorCheck.check_2} 
                                             onChange={this.handleInputChange} />
                                         <label htmlFor="actor_2">Jodie Foster</label>
                                     </li>
                                     <li>
-                                        <input type="checkbox" id="actor_3" value="3"
-                                            checked={this.state.actors.find((id)=> id===3)} 
+                                        <input type="checkbox" id="actor_3" name="check_3" value="3"
+                                            checked={this.state.actorCheck.check_3} 
                                             onChange={this.handleInputChange} />
                                         <label htmlFor="actor_3">Anthony Hopkins</label>
                                     </li>
                                     <li>
-                                        <input type="checkbox" id="actor_4" value="4"
-                                            checked={this.state.actors.find((id)=> id===4)} 
+                                        <input type="checkbox" id="actor_4" name="check_4" value="4"
+                                            checked={this.state.actorCheck.check_4} 
                                             onChange={this.handleInputChange} />
                                         <label htmlFor="actor_4">Emma Watson</label>
                                     </li>
                                     <li>
-                                        <input type="checkbox" id="actor_5" value="5"
-                                            checked={this.state.actors.find((id)=> id===5)} 
+                                        <input type="checkbox" id="actor_5" name="check_5" value="5"
+                                            checked={this.state.actorCheck.check_5} 
                                             onChange={this.handleInputChange} />
                                         <label htmlFor="actor_5">John Doe</label>
                                     </li>
@@ -166,7 +210,7 @@ class AddMovie extends Component{
                                     min="0"
                                     max="5"
                                     step="0.01"
-                                    value={this.state.avg_rating}
+                                    value={this.state.data.avg_rating}
                                     onChange={this.handleInputChange}
                                 />
                             </td>
@@ -180,13 +224,13 @@ class AddMovie extends Component{
                                     placeholder="Enter the summary of the movie"
                                     name="description"
                                     id="description"
-                                    value={this.state.description}
+                                    value={this.state.data.description}
                                     onChange={this.handleInputChange}
                                 />
                             </td>
                         </tr>
                     </table>
-                    <input type="submit"></input>
+                    <button type="submit"> Submit Movie </button>
                 </form>
             </div>
         )
