@@ -338,3 +338,11 @@ ul{
 #form-body button:active{
   box-shadow: 5px 5px 0px 0px rgba(255, 216, 236, 1);   
 }
+
+#addMovie{
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
