@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/moviefy/static/css/main.ba848e94.chunk.css",
+    "main.js": "/moviefy/static/js/main.365db135.chunk.js",
+    "main.js.map": "/moviefy/static/js/main.365db135.chunk.js.map",
+    "runtime~main.js": "/moviefy/static/js/runtime~main.78c58e37.js",
+    "runtime~main.js.map": "/moviefy/static/js/runtime~main.78c58e37.js.map",
+    "static/js/2.91ebf26e.chunk.js": "/moviefy/static/js/2.91ebf26e.chunk.js",
+    "static/js/2.91ebf26e.chunk.js.map": "/moviefy/static/js/2.91ebf26e.chunk.js.map",
+    "index.html": "/moviefy/index.html",
+    "precache-manifest.421ff4d6cd0dc525a91c592e7eb1b744.js": "/moviefy/precache-manifest.421ff4d6cd0dc525a91c592e7eb1b744.js",
+    "service-worker.js": "/moviefy/service-worker.js",
+    "static/css/main.ba848e94.chunk.css.map": "/moviefy/static/css/main.ba848e94.chunk.css.map"
+  }
+}
