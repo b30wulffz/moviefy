@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b828ae195952faab27bd7c53a7fcc337",
+    "revision": "87ccc6c0a01b30bcf6253edb6cbdfd2b",
     "url": "/moviefy/index.html"
   },
   {
-    "revision": "219f2d47d882c6bfe351",
+    "revision": "72ac13686edb1d3c2a1e",
     "url": "/moviefy/static/css/main.03ff976d.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/moviefy/static/js/2.79ccbe0a.chunk.js"
   },
   {
-    "revision": "219f2d47d882c6bfe351",
-    "url": "/moviefy/static/js/main.39e72acd.chunk.js"
+    "revision": "72ac13686edb1d3c2a1e",
+    "url": "/moviefy/static/js/main.9c816d88.chunk.js"
   },
   {
     "revision": "dde229af3155959f9868",
