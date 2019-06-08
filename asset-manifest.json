@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/moviefy/static/css/main.03ff976d.chunk.css",
-    "main.js": "/moviefy/static/js/main.9c816d88.chunk.js",
-    "main.js.map": "/moviefy/static/js/main.9c816d88.chunk.js.map",
+    "main.js": "/moviefy/static/js/main.e483bbe9.chunk.js",
+    "main.js.map": "/moviefy/static/js/main.e483bbe9.chunk.js.map",
     "runtime~main.js": "/moviefy/static/js/runtime~main.78c58e37.js",
     "runtime~main.js.map": "/moviefy/static/js/runtime~main.78c58e37.js.map",
     "static/js/2.79ccbe0a.chunk.js": "/moviefy/static/js/2.79ccbe0a.chunk.js",
     "static/js/2.79ccbe0a.chunk.js.map": "/moviefy/static/js/2.79ccbe0a.chunk.js.map",
     "index.html": "/moviefy/index.html",
-    "precache-manifest.cf38b3f6c1e04cae815be845e13e2c19.js": "/moviefy/precache-manifest.cf38b3f6c1e04cae815be845e13e2c19.js",
+    "precache-manifest.402777f52ab037b380312207fd1d1e9d.js": "/moviefy/precache-manifest.402777f52ab037b380312207fd1d1e9d.js",
     "service-worker.js": "/moviefy/service-worker.js",
     "static/css/main.03ff976d.chunk.css.map": "/moviefy/static/css/main.03ff976d.chunk.css.map"
   }
