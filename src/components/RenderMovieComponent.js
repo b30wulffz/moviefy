@@ -60,7 +60,7 @@ class RenderMovie extends Component{
         function RenderPerson({data}){
             return (
                 <div className="person-card" key={data.user_id}>
-                    <img src={process.env.PUBLIC_URL +data.profile_pic} className="person-img" />
+                    <img src={process.env.PUBLIC_URL +data.profile_pic} className="person-img" alt={data.first_name+"'s Photo"} />
                     <p className="person-name">{data.first_name} {data.last_name}</p>
                     <p className="person-age">Age: {data.age}</p>
                 </div>

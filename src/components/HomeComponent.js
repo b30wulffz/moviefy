@@ -33,7 +33,7 @@ class Home extends Component{
                         {movie.title}
                     </div>
                     <div className="card-image">
-                        <img src={movie.poster} />
+                        <img src={movie.poster} alt={movie.title} />
                     </div>
                     <div className="card-rating">
                         <StarRatings

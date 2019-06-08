@@ -49,24 +49,26 @@ class AddMovie extends Component{
 
         if(target.type === "checkbox"){
             const checked= target.checked;
-            /*if(checked){
-                const actorId=target.value;
-                //const actorArray= this.state.data.actors.push(parseInt(actorId,10));
+            if(checked){
+                const actorId= target.value;
+                const actorArray=this.state.data.actors;
+                actorArray.push(parseInt(actorId,10));
                 this.setState((prevState)=>{
                     return ({
                             data:{
                                 ...prevState.data,
-                                actors: prevState.actors.concat([actorId])
+                                actors: actorArray
                             }
                         })
                 })
             }
-            else{
+            else {
                 const actorId=target.value;
                 const index= this.state.data.actors.indexOf(parseInt(actorId,10));
                 if(index>-1)
                 {
-                    const actorArray= this.state.actors.splice(index,1);
+                    const actorArray= this.state.data.actors;
+                    actorArray.splice(index,1);
                     this.setState((prevState)=>{
                         return ({
                                 data:{
@@ -76,7 +78,9 @@ class AddMovie extends Component{
                             })
                     })
                 }
-            }*/
+
+            }
+
             this.setState((prevState)=>{
                 return ({
                         actorCheck:{
@@ -257,7 +261,9 @@ class AddMovie extends Component{
                                 </td>
                             </tr>
                         </table>
-                        <button type="submit"> Submit Movie </button>
+                        <span id="form-button">
+                            <button type="submit"> Submit Movie </button>
+                        </span>
                     </form>
                 </div>
         }

@@ -329,6 +329,8 @@ ul{
   background:	rgba(255, 216, 236,0.5);
   border: thin solid rgb(229, 46, 120);
   margin-top:5px;
+  cursor: pointer;
+  color: rgb(229, 46, 120);
 }
 
 #form-body button:hover{
@@ -345,4 +347,10 @@ ul{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#form-button{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
