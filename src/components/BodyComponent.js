@@ -9,10 +9,11 @@ function Body(){
     return (
         <div id="body-main">
             <Switch>
+                <Route exact path="/" component={Home} />
                 <Route exact path="/home" component={Home} />
-                <Route exact path="/home/:movieId" component={RenderMovie} />
+                <Route exact path="/movie/:movieId" component={RenderMovie} />
                 <Route exact path="/add_movie" component={AddMovie} />
-                <Redirect to="/home" />
+                <Redirect to="/" />
             </Switch>
         </div>
     )

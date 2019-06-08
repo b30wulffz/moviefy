@@ -28,12 +28,12 @@ class Home extends Component{
 
         function renderMovieDisp(movie){
             return (
-                <NavLink to={`/home/${movie.movie_id}`} className="card" key={movie.movie_id}>
+                <NavLink to={`/movie/${movie.movie_id}`} className="card" key={movie.movie_id}>
                     <div className="card-title">
                         {movie.title}
                     </div>
                     <div className="card-image">
-                        <img src={movie.poster} alt={movie.title} />
+                        <img src={process.env.PUBLIC_URL + movie.poster} alt={movie.title} />
                     </div>
                     <div className="card-rating">
                         <StarRatings
