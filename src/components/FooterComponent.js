@@ -7,6 +7,7 @@ function Footer(){
             <div id="credits">
                 <p>&copy; 2019</p>
                 <p>Made by Shlok Pandey</p>
+                <p><a href="https://github.com/b30wulffz/moviefy"><b><i class="fas fa-code-branch"></i> Fork it</b></a></p>
             </div>
             <div id="contact">
                 <h3>Contact Us:</h3>

@@ -43,16 +43,20 @@ class RenderMovie extends Component{
         });
     }
 
+    
+
     changeRating( newRating, name) {
+        
+        const alertRating={
+            "movie_id": parseInt(name,10),
+            "ratings": newRating
+        }
         this.setState({
           ratings: [
-              {
-                "movie_id": name,
-                "ratings": newRating
-              }
+              alertRating
           ]
         });
-        console.log(this.state.ratings);
+        alert(JSON.stringify(alertRating));
       }
 
     render(){
@@ -181,7 +185,7 @@ class RenderMovie extends Component{
                                                 starRatedColor="rgb(255, 146, 36)"
                                                 changeRating={this.changeRating}
                                                 numberOfStars={5}
-                                                name={currMovie.movie_id}
+                                                name={currMovie.movie_id.toString(10)}
                                                 starDimension="25px"
                                                 starSpacing="8px"
                                             />
