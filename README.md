@@ -1,68 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MovieFy
 
-## Available Scripts
+MovieFy is a movie rating plaform, powered by React.
 
-In the project directory, you can run:
+# New Features!
 
-### `npm start`
+  - Added an option to Add Movie
+  - On changing rating or after adding a movie, a popup with JSON will appear
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can also:
+  - See movies in the form of tiles
+  - Open each movie in separate section
+  - Rate each movie
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+`Note: This website will only run on full screen mode on desktop as it is **not resposive** as of now.`
 
-### `npm test`
+### Tech
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+MovieFy uses a number of open source projects to work properly:
 
-### `npm run build`
+* [ReactJS] - A Javascript Framework
+* [Movie API] - API to fetch movies
+And of course MovieYy itself is open source with a [public repository][dill]
+ on GitHub.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+MovieFy requires [Node.js](https://nodejs.org/) v10+ to run.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install the dependencies and devDependencies and start the server.
 
-### `npm run eject`
+```sh
+$ #clone moviefy.
+$ cd moviefy
+$ npm install
+$ npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For production environments...
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ - Install gh-pages *(Google it)*
+ - Setup ```homepage: https://[your-user-name].github.io/[your-repo-name]/``` in package.json
+ - Setup ```"predeploy": "npm run build", "deploy": "gh-pages -d build"``` in "scripts" of package.json 
+ - Run: ```$ npm run deploy```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Development
 
-## Learn More
+Want to contribute? Great!
+You are welcome to contribute and increase the features on this website.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Todos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ - Integrate Front End with Back End
+ - Add Login and Sign Up Authentication
+ - **Make website responsive**
 
-### Code Splitting
+License
+----
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+[GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+**Free Software, Hell Yeah!**
 
-### Making a Progressive Web App
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+   [dill]: <https://github.com/b30wulffz/moviefy>
