@@ -16,6 +16,8 @@ You can also:
 
 `Note: This website will only run on full screen mode on desktop as it is **not resposive** as of now.`
 
+You can visit the website by clicking [here](b30wulffz.github.io/moviefy/).
+
 ### Screenshots
 
 Here are some screenshots of the website:
