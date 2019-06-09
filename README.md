@@ -2,6 +2,8 @@
 
 MovieFy is a movie rating plaform, powered by React.
 
+![mac](screenshots/mac1.PNG)
+
 # New Features!
 
   - Added an option to Add Movie
@@ -14,13 +16,23 @@ You can also:
 
 `Note: This website will only run on full screen mode on desktop as it is **not resposive** as of now.`
 
+### Screenshots
+
+Here are some screenshots of the website:
+
+![Tablet](screenshots/tab.PNG)
+`Note: This website is not compatible with tablets or mobile as of now.`
+
+![Mac](screenshots/macbook.PNG)
+
 ### Tech
 
 MovieFy uses a number of open source projects to work properly:
 
-* [ReactJS] - A Javascript Framework
-* [Movie API] - API to fetch movies
-And of course MovieYy itself is open source with a [public repository][dill]
+* ReactJS - A Javascript Framework
+* Movies API - API to fetch movies (will be integrated in future, right now it uses local JSON file to fetch data)
+
+And of course MovieYy itself is open source with a [public repository][moviefy]
  on GitHub.
 
 ### Installation
@@ -63,7 +75,7 @@ License
 
 **Free Software, Hell Yeah!**
 
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+[//]: # (Reference links)
 
 
-   [dill]: <https://github.com/b30wulffz/moviefy>
+   [moviefy]: <https://github.com/b30wulffz/moviefy>
