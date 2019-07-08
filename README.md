@@ -1,6 +1,6 @@
 # MovieFy
 
-MovieFy is a movie rating plaform, powered by React.
+MovieFy is a movie rating platform, powered by React.
 
 ![mac](screenshots/mac1.PNG)
 
