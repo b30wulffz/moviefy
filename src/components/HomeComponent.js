@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import MovieData from '../shared/movies';
 import StarRatings from 'react-star-ratings';
-import {NavLink} from 'react-router-dom';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 
@@ -28,7 +27,7 @@ class Home extends Component{
 
         function renderMovieDisp(movie){
             return (
-                <NavLink to={`/movie/${movie.movie_id}`} className="card" key={movie.movie_id}>
+                <div to={`/movie/${movie.movie_id}`} className="card" key={movie.movie_id}>
                     <div className="card-title">
                         {movie.title}
                     </div>
@@ -41,11 +40,11 @@ class Home extends Component{
                             starRatedColor="rgb(229, 46, 120)"
                             numberOfStars={5}
                             name='rating'
-                            starDimension="25px"
+                            starDimension="15px"
                             starSpacing="8px"
                         />
                     </div>
-                </NavLink>
+                </div>
             )
         }
 
