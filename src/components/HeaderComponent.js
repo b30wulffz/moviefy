@@ -1,15 +1,16 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 function Header(){
-    const navbar = nav => {
-        var x = document.getElementById("myTopnav");
+    const navbar = (event) => {
+      event.preventDefault();
+      var x = document.getElementById("myTopnav");
 
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
       }
+    }
 
     return (
 
