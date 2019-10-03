@@ -7,8 +7,16 @@ ul{
   list-style: none;
 }
 
+.body-main {
+  min-height: 500px;
+}
+
+.App {
+  overflow: hidden; 
+}
+
 /* Header */
-#navbar {
+.navbar {
   display: flex;
   width: 100vw;
   height: 15vh;
@@ -17,7 +25,23 @@ ul{
   background: rgb(229, 46, 120);
 }
 
-#nav-banner{
+.collapse.show.navbar-collapse {
+  background: rgb(229, 46, 120);
+  height: 100vh;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.navbar-light .navbar-toggler {
+  background-color: #fff;
+  border: none;
+}
+
+nav.navbar-light .navbar-brand {
+  color: #fff
+}
+
+.nav-logo{
   font-family: 'East Sea Dokdo', cursive;
   color: white;
   font-size: 40px;
@@ -26,16 +50,7 @@ ul{
   padding: 10px;
 }
 
-#nav-button{
-  width: 30vw;
-}
-
-#nav-button ul{
-  display: flex;
-  justify-content: space-around;
-}
-
-#nav-button ul .nav-link{
+nav.navbar-light .navbar-nav .nav-link{
   display: inline-block;
   background: white;
   color: rgb(229, 46, 120);
@@ -44,14 +59,12 @@ ul{
   height: 40px;
   text-align: center;
   align-self: center;
-  padding-top: 14px;
+  padding-top: 8px;
   border-radius: 4px;
 }
 
 /* Footer */
-#footer {
-  /* width: 100vw; */
-  height: 19.3vh;
+.footer {
   background: black;
   color: rgb(229, 46, 120);
   border-top: thick dashed rgb(229, 46, 120);
@@ -60,13 +73,15 @@ ul{
   align-items: center;
 }
 
-#credits{
+.credits{
   padding-left: 10px;
-  width: 20vw;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#contact{
-  width: 20vw;
+.contact{
   padding-right: 10px;
   display: flex;
   flex-direction: column;
@@ -74,7 +89,7 @@ ul{
   align-items: center;
 }
 
-#contact-links{
+.contact-links{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,14 +97,7 @@ ul{
   align-items: flex-start; 
 }
 
-/* Body */
-
-#body-main{
-  height: 65vh;
-}
-
 /* Home */
-
 #home{
   display: flex;
   flex-direction: column;
@@ -98,24 +106,21 @@ ul{
   height: inherit;
 }
 
-#home-head{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+.home-head{
+  text-align: center;
+  padding-top: 20px;
 }
 
 #home-display{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80vw;
-  overflow-x: auto;
-  overflow-y: hidden;
+  padding-bottom: 30px;
+  overflow: hidden;
 }
 
 .card{
-  height: 300px;
+  min-height: 330px;
   min-width: 240px;
   border: thin solid black;
   margin: 10px;
@@ -132,8 +137,11 @@ ul{
   text-align: center;
   font-weight: 700;
   border-bottom: thin solid black;
-  padding: 5px;
-  height: 25px;
+  margin-bottom: 0 !important;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 .card-image img{
@@ -146,7 +154,6 @@ ul{
 }
 
 .card-image{
-  
   background:	rgb(255, 216, 236);
 }
 
@@ -165,6 +172,7 @@ ul{
   justify-content: space-around;
   align-items: center;
   height: inherit;
+  padding-top: 50px
 }
 
 #error{
@@ -177,13 +185,6 @@ ul{
 }
 
 /* Movie Card */
-#movie-card{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
 #movie-card-title{
   width:auto;
   text-align: center;
@@ -193,7 +194,7 @@ ul{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+
 }
 
 #movie-card-image img{
@@ -211,7 +212,6 @@ ul{
   justify-content: center;
   /* align-items: center; */
   width: auto;
-  max-width: 60vw;
   height:auto;
   border-radius: 5px;
   margin-left: 10px;
@@ -248,8 +248,6 @@ ul{
   z-index: 1;
   text-align: center;
   background:	rgba(255, 216, 236,0.5);
-  display: inline;
-  width: inherit;
   opacity: 0;
 }
 
@@ -318,6 +316,7 @@ ul{
   height: 70px;
   width: 302px
 }
+
 #form-body select{
   width: 314px;
 }
@@ -347,10 +346,40 @@ ul{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 30px
 }
 
 #form-button{
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-right: 15px;
+    padding-left: 15px;
+    z-index: 99;
+  }
+
+  .navbar-nav {
+    align-items: center;
+    margin-top: 150px;
+  }
+
+  #home-display {
+    flex-direction: column;
+  }
+
+  #movie-card-body {
+    flex-direction: column;
+    padding-top: 15px;
+  }
+
+  #movie-card-content {
+    margin-top: 15px;
+    min-width: 340px
+  }
 }
