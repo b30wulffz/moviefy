@@ -14,7 +14,7 @@ You can also:
   - Open each movie in separate section
   - Rate each movie
 
-`Note: This website will only run on full screen mode on desktop as it is **not resposive** as of now.`
+`Note: This website will only run on full screen mode on desktop as it is **not resposive** as of now. Responsive website will go live soon.`
 
 You can visit the website by clicking [here](https://b30wulffz.github.io/moviefy/).
 
